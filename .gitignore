@@ -1,0 +1,19 @@
+# Data
+data/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+
+# Colab / Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
