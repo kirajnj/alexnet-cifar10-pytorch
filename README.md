@@ -1,15 +1,20 @@
-# AlexNet for CIFAR-10 
+# AlexNet for CIFAR-10
 
-An implementation of AlexNet in PyTorch for image classification using the CIFAR-10 dataset.
+Implementation of the classic AlexNet architecture in PyTorch for image classification
+on the CIFAR-10 dataset. The network:
+- consists of five convolutional layers and three fully connected layers;
+- accepts RGB images as input.
 
 ## Dataset
-[CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) 
+[CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
 
-## Results
-- **Test accuracy: 78.97%**
-- 20 epochs, Adam (lr=0.001), CrossEntropyLoss, batch size 64
-- Data augmentation: RandomHorizontalFlip, RandomRotation, RandomAffine
-- Architecture: 5 conv + 3 FC layers, ReLU, MaxPool after Conv 1/2/5, Dropout 0.5 
+## Workflow
+- Data — CIFAR-10 loading, augmentation (flip, rotation, affine), normalization to [-1, 1]
+- Model — AlexNetRGB: 5 conv layers + 3 FC layers + Dropout; ~611K parameters
+- Training — Adam (lr=0.001), CrossEntropyLoss, batch size 64, 20 epochs
+- Evaluation — classification_report, confusion matrix, error visualization
+- Results — 78.97% test accuracy; no signs of overfitting
+- Conclusion — stable CIFAR-10 classification; best classes: automobile, truck, ship, frog; weaker classes: cat↔dog, bird↔deer
 
 ## Training
 <img width="1114" height="436" alt="training_curve" src="https://github.com/user-attachments/assets/680b2b06-f7fa-4d15-aae8-2fb3c4be8366" />
