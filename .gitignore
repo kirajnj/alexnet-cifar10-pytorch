@@ -1,19 +1,48 @@
-# Data
-data/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
 
-# Model weights
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.ipynb_checkpoints/*
+
+# PyTorch / данные
+data/
 *.pth
 *.pt
 *.ckpt
+*.onnx
 
-# Colab / Jupyter
-.ipynb_checkpoints/
-__pycache__/
-*.pyc
-# OS
+*.log
+*.tmp
 .DS_Store
 Thumbs.db
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Colab
+.config/
+sample_data/
+
+results/
+outputs/
+runs/
+*.png
+!docs/**/*.png
